@@ -1,0 +1,35 @@
+## system packages
+
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install -y libkrb5-dev libx11-dev libxkbfile-dev pkg-config libsecret-1-dev
+
+nvm install 20.16.0
+nvm use 20.16.0
+
+## pull tag directly
+git clone https://github.com/microsoft/vscode.git --branch=1.92.0 .
+
+## get all tags
+git fetch --all --tags --prune
+
+## checkout tag 
+git checkout tags/1.92.0
+
+## RUN
+corepack enable
+
+yarn
+
+## build
+Add 
+ "quality": "stable"
+To product.json
+And build
+
+yarn gulp vscode-reh-web-linux-x64-min
+
+
+## RUN
+./bin/runcode --default-folder <path_to_folder>
+
+it will run on port 8000
