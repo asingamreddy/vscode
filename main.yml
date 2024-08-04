@@ -32,4 +32,4 @@ yarn gulp vscode-reh-web-linux-x64-min
 ## RUN
 ./bin/runcode --default-folder <path_to_folder>
 
-it will run on port 10000
+it will run on port 8000
